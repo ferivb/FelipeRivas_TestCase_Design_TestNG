@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50dfaef4-df2e-4ff8-8202-fedca62fa3bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/resources/Suite.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/Suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/Suite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/Suite.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +263,7 @@
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTest.testingLogin">
+  <component name="RunManager" selected="TestNG.C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/resources/Suite.xml">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -309,27 +308,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.fuckThis" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/globant/Suite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FelipeRivas_TestCase_Design_TestNG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.globant.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.globant" />
-      <option name="MAIN_CLASS_NAME" value="com.globant.AppTest" />
-      <option name="METHOD_NAME" value="fuckThis" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/com/globant/Suite.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/globant/Suite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/resources/Suite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FelipeRivas_TestCase_Design_TestNG" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/com/globant/Suite.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/com/resources/Suite.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -355,12 +346,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LogoutTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FelipeRivas_TestCase_Design_TestNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.globant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.globant" />
+      <option name="MAIN_CLASS_NAME" value="com.globant.LogoutTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/resources/Suite.xml" />
+        <item itemvalue="TestNG.C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/globant/Suite.xml" />
+        <item itemvalue="TestNG.LogoutTest" />
         <item itemvalue="TestNG.LoginTest.testingLogin" />
         <item itemvalue="TestNG.AppTest" />
-        <item itemvalue="TestNG.C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/globant/Suite.xml" />
-        <item itemvalue="TestNG.AppTest.fuckThis" />
       </list>
     </recent_temporary>
   </component>

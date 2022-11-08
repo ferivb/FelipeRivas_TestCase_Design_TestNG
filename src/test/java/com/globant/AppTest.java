@@ -14,7 +14,7 @@ public class AppTest
 {
     public static final Logger log = Logger.getLogger(String.valueOf(AppTest.class));
 
-    @BeforeSuite
+    @BeforeTest
     public void checkIfValidAccount(){
         boolean loginSuccess = false;
         log.info("Opening browser");
@@ -34,7 +34,7 @@ public class AppTest
     }
 
     @BeforeMethod
-    public void navigateToESPN(){
+    public void navigateToESPNHome(){
         log.info("Double clicking the address bar");
         log.info("Entering the address: https://www.espnqa.com/?_adbock=true&src=com&espn=cloud");
         log.info("Pressing Enter");
@@ -50,6 +50,7 @@ public class AppTest
     @AfterClass
     public void closeBrowser(){
         log.info("Click on the right top corner exit button");
+        System.out.println("");
     }
 
 }
