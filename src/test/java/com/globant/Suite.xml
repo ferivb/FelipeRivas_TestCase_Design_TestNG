@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="ESPN Tests">
-    <test name="Login tests">
+    <test name="Login test">
         <classes>
-            <class name="com.globant.AppTest"></class>
+            <class name="com.globant.LoginTest"/>
         </classes>
     </test>
 </suite>

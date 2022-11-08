@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="50dfaef4-df2e-4ff8-8202-fedca62fa3bf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/Suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/Suite.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +174,13 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="HIDE_WARNINGS" value="false" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -193,6 +206,13 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="PerforceConfiguration">
     <option name="PORT" value="magic:1666" />
@@ -240,10 +260,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG"
+    "last_opened_file_path": "C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/globant/Suite.xml">
+  <component name="RunManager" selected="TestNG.LoginTest.testingLogin">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -267,6 +288,23 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FelipeRivas_TestCase_Design_TestNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.globant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.globant" />
+      <option name="MAIN_CLASS_NAME" value="com.globant.AppTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -299,8 +337,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTest.testingLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FelipeRivas_TestCase_Design_TestNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.globant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.globant" />
+      <option name="MAIN_CLASS_NAME" value="com.globant.LoginTest" />
+      <option name="METHOD_NAME" value="testingLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.testingLogin" />
+        <item itemvalue="TestNG.AppTest" />
         <item itemvalue="TestNG.C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/globant/Suite.xml" />
         <item itemvalue="TestNG.AppTest.fuckThis" />
       </list>
@@ -443,5 +501,9 @@
   </component>
   <component name="WebViewSettings">
     <webview flattenPackages="false" showMembers="false" autoscrollToSource="false" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

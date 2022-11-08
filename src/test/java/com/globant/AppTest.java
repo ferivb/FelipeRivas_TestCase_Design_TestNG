@@ -1,56 +1,55 @@
 package com.globant;
 
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.*;
+
+import java.util.logging.Logger;
+
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
 {
+    public static final Logger log = Logger.getLogger(String.valueOf(AppTest.class));
+
     @BeforeSuite
-    public void openBrowser(){
-        System.out.println("Opening browser");
+    public void checkIfValidAccount(){
+        boolean loginSuccess = false;
+        log.info("Opening browser");
+        log.info("Navigating to: https://www.espnqa.com/?_adbock=true&src=com&espn=cloud");
+        log.info("Clicking on top right option");
+        log.info("Clicking on login");
+        log.info("Typing in user and password");
+        loginSuccess = true;
+        Assert.assertTrue(loginSuccess);
         System.out.println("");
     }
 
     @BeforeClass
-    public void checkAccount(){
-        System.out.println("Check if account is valid");
+    public void openBrowser(){
+        log.info("Opening Browser");
         System.out.println("");
     }
 
     @BeforeMethod
-    public void cleanCookies(){
-        System.out.println("Cleaning cookies");
+    public void navigateToESPN(){
+        log.info("Double clicking the address bar");
+        log.info("Entering the address: https://www.espnqa.com/?_adbock=true&src=com&espn=cloud");
+        log.info("Pressing Enter");
         System.out.println("");
     }
 
-    @BeforeMethod
-    public void goToPage(){
-        System.out.println("Going to https://www.espnqa.com/?_adbock=true&src=com&espn=cloud");
+    @AfterMethod
+    public void clearingCookies(){
+        log.info("Cleaning all cookies");
         System.out.println("");
     }
 
-    @Test(priority = 1)
-    public void login(){
-        System.out.println("Logging in");
-        System.out.println("");
-    }
-
-    @Test(priority = 2)
-    public void logout(){
-        System.out.println("Logging out");
-        System.out.println("");
-    }
-
-    @Test(priority = 3)
-    public void disableUser(){
-        System.out.println("disabling the user");
-        System.out.println("");
-    }
-
-    @AfterSuite
+    @AfterClass
     public void closeBrowser(){
-        System.out.println("Closing browser");
+        log.info("Click on the right top corner exit button");
     }
+
 }
