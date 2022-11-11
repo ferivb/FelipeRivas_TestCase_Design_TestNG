@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50dfaef4-df2e-4ff8-8202-fedca62fa3bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/resources/Suite.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/Suite.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,14 +253,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\felipe.rivas\TestAutomationModule\FelipeRivas_TestCase_Design_TestNG\src\test\java\com\resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="TestNG.C:/Users/felipe.rivas/TestAutomationModule/FelipeRivas_TestCase_Design_TestNG/src/test/java/com/resources/Suite.xml">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
