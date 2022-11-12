@@ -1,19 +1,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="ESPN Tests">
-    <test name="Login test">
-        <classes>
-            <class name="com.globant.LoginTest"/>
-        </classes>
-    </test>
-    <test name="Logout test">
-        <classes>
-            <class name="com.globant.LogoutTest"/>
-        </classes>
-    </test>
-    <test name="Deactivation test">
-        <classes>
-            <class name="com.globant.AccountDeactivationTest"/>
-        </classes>
+    <listeners>
+        <listener class-name="com.globant.utils.Listener"/>
+    </listeners>
+
+    <parameter name="url" value="https://www.espnqa.com/?src=com&_adblock=true&espn=cloud"/>
+
+    <test name="ESPN tests">
+        <parameter name="browser" value="chrome"/>
+    <classes>
+        <class name="com.globant.tests.LoginTest"/>
+        <class name="com.globant.tests.LogoutTest"/>
+        <class name="com.globant.tests.AccountDeactivationTest"/>
+    </classes>
     </test>
 </suite>
