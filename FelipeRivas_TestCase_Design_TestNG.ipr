@@ -17,7 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="FelipeRivas_TestCase_Design_TestNG" target="1.7" />
+      <module name="FelipeRivas_TestCase_Design_TestNG" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="Encoding">

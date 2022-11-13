@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="50dfaef4-df2e-4ff8-8202-fedca62fa3bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/globant/reporting/Reporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/globant/reporting/Reporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/utils/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/utils/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/resources/Suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Suite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/globant/configuration/WebOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/globant/configuration/WebOperations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
