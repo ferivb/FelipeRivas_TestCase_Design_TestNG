@@ -5,14 +5,14 @@
         <listener class-name="com.globant.utils.Listener"/>
     </listeners>
 
-    <parameter name="url" value="https://www.espnqa.com/?src=com&_adblock=true&espn=cloud"/>
+    <parameter name="url" value="https://www.espnqa.com/?src=com&amp;_adblock=true&amp;espn=cloud"/>
 
     <test name="ESPN tests">
         <parameter name="browser" value="chrome"/>
     <classes>
         <class name="com.globant.tests.LoginTest"/>
-        <class name="com.globant.tests.LogoutTest"/>
-        <class name="com.globant.tests.AccountDeactivationTest"/>
+<!--        <class name="com.globant.tests.LogoutTest"/>-->
+<!--        <class name="com.globant.tests.AccountDeactivationTest"/>-->
     </classes>
     </test>
 </suite>

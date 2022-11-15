@@ -17,7 +17,7 @@ public class WebOperations {
 
     public WebOperations(WebDriver driver){
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5L));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20L));
         initElements(driver, this);
     }
 
@@ -26,7 +26,9 @@ public class WebOperations {
     }
 
     public void clickElement(WebElement element){
+        waitForVisibility(element);
         waitForClickable(element);
+        element.click();
     }
 
     public void typeOfInput(WebElement element, String text){
