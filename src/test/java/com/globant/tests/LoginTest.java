@@ -1,5 +1,6 @@
 package com.globant.tests;
 
+import com.globant.pages.WatchPage;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -18,5 +19,8 @@ public class LoginTest extends BaseTest {
         home.enterPassword("Abc123456");
         home.clickOnLoginSubmit();
         home.exitIframe();
+        WatchPage watch = home.goToWatchPage();
+        checkThat("There is at least one carousel with title and description on every card", watch.secondCarouselIsNotEmpty(), is(true));watch.secondCarouselIsNotEmpty();
+        watch.clickOnCardByIndex(1);
     }
 }

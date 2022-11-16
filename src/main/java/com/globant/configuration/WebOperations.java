@@ -15,7 +15,7 @@ import static org.openqa.selenium.support.PageFactory.initElements;
 public class WebOperations {
 
     private final WebDriver driver;
-    private final WebDriverWait wait;
+    protected final WebDriverWait wait;
 
     public WebOperations(WebDriver driver){
         this.driver = driver;

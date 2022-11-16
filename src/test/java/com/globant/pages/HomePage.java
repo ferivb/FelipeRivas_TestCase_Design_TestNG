@@ -5,6 +5,8 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 
 import static java.lang.String.format;
 
@@ -46,13 +48,8 @@ public class HomePage extends BasePage{
     @FindBy(className = "PromoBanner__CloseBtn")
     private WebElement closeBannerButton;
 
-    public WebElement getProfileInfoButton() {
-        return profileInfoButton;
-    }
-
-    public WebElement getLoginSubmitButton() {
-        return loginSubmitButton;
-    }
+    @FindBy(css = "a[href=\"http://www.espn.com/watch/\"]")
+    private WebElement watchButton;
 
     public void clickOnProfileManager(){
         clickElement(profileInfoButton);
@@ -79,7 +76,8 @@ public class HomePage extends BasePage{
     }
 
     public void exitIframe(){
-        super.getDriver().switchTo().defaultContent();
+        super.getDriver().switchTo().parentFrame();
+        super.wait.until(ExpectedConditions.invisibilityOf(loginIframe));
     }
 
     public boolean isLoginIframeVisible(){
@@ -107,6 +105,11 @@ public class HomePage extends BasePage{
             visible = false;
         }
         return visible;
+    }
+
+    public WatchPage goToWatchPage(){
+        clickElement(watchButton);
+        return new WatchPage(getDriver());
     }
 
     public void goToProfileSettingsIframe(){
