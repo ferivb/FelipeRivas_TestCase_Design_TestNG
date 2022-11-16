@@ -1,5 +1,7 @@
 package com.globant.configuration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -37,6 +39,10 @@ public class WebOperations {
 
     public void waitForVisibility(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitForPresence(String locator){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(locator)));
     }
 
     public void waitForClickable(WebElement element){

@@ -5,9 +5,7 @@ import com.globant.pages.HomePage;
 import com.globant.reporting.Reporter;
 import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import static java.lang.String.format;
 
@@ -27,6 +25,13 @@ public class BaseTest {
         driver.getDriver().manage().window().maximize();
         home = new HomePage(driver.getDriver());
 
+    }
+
+    @BeforeClass
+    public void closeBanner(){
+        if (home.confirmIfBannerIsVisible()){
+            Reporter.info("Found the banner");
+        }
     }
 
     @AfterTest
