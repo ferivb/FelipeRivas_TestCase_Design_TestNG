@@ -2,16 +2,16 @@ package com.globant.tests;
 
 import com.globant.reporting.Reporter;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import static org.hamcrest.CoreMatchers.is;
 
 public class AccountDeactivationTest extends BaseTest {
 
-    private String email = "1234567@fakemail.com";
-    private String password = "Abc123456";
-
+    @Parameters({"email", "password"})
     @BeforeMethod
-    public void login(){
+    public void login(String email, String password){
+        home.waitForUserIconButton();
         home.closePromoBanner();
         home.clickOnUserIcon();
         home.clickOnLoginIframeLauncher();
@@ -22,8 +22,10 @@ public class AccountDeactivationTest extends BaseTest {
         home.exitIframe();
     }
 
+    @Parameters({"email", "password"})
     @Test
-    public void accountDeactivationTest(){
+    public void accountDeactivationTest(String email, String password){
+        home.waitForUserIconButton();
         home.clickOnUserIcon();
         home.clickOnModifyAccount();
         home.goToModifyAccountIframe();
@@ -31,11 +33,11 @@ public class AccountDeactivationTest extends BaseTest {
         home.scrollToDeleteLink();
         home.clickOnDeleteAccountLink();
         Reporter.info("Clicked on account delete");
-//        home.goToDeletionConfirmIframe();
+        home.waitForCancelDeletionButton();
         checkThat("Delete confirmation button is visible", home.isDeleteConfirmationButtonVisible(), is(true));
         home.clickConfirmDeleteAccount();
+        home.waitForIfThisIsAnErrorText();
         home.clickFinalDeleteDisclosure();
-//        checkThat("Green checkmark appears", home.validateGreenCheckmark(), is(true));
         home.exitIframe();
         home.refreshHomePage();
         home.closePromoBanner();
@@ -45,7 +47,9 @@ public class AccountDeactivationTest extends BaseTest {
         home.enterEmail(email);
         home.enterPassword(password);
         home.clickOnLoginSubmit();
+        home.waitForAccountDeactivatedTextBlock();
         checkThat("account deactivated message appears", home.isAccountDeactivated(), is(true));
+        home.clickCloseAccountDeactivatedPopUp();
         home.exitIframe();
     }
 }

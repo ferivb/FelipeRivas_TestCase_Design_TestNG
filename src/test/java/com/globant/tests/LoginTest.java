@@ -2,15 +2,18 @@ package com.globant.tests;
 
 import com.globant.pages.WatchPage;
 import com.globant.reporting.Reporter;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 
 public class LoginTest extends BaseTest {
 
+    @Parameters({"email", "password"})
     @Test
-    public void loginTest(){
+    public void loginTest(String email, String password){
         Reporter.info("Beginning the Login Test Case");
+        home.waitForUserIconButton();
         home.clickOnUserIcon();
         home.clickOnLoginIframeLauncher();
         home.goToLoginIframe();
@@ -18,8 +21,8 @@ public class LoginTest extends BaseTest {
         checkThat("ESPN login Logo is present", home.isIframeLogoVisible(), is(true));
         checkThat("Login button is present", home.isLoginButtonVisible(), is(true));
         checkThat("Sing up button is present", home.isSingUpButtonVisible(), is(true));
-        home.enterEmail("123456@fakemail.com");
-        home.enterPassword("Abc123456");
+        home.enterEmail(email);
+        home.enterPassword(password);
         home.clickOnLoginSubmit();
         home.exitIframe();
         WatchPage watch = home.goToWatchPage();

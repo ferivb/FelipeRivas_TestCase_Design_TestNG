@@ -9,9 +9,11 @@
 
     <test name="ESPN tests">
         <parameter name="browser" value="chrome"/>
+        <parameter name="email" value="fake1@fakemail.com"/>
+        <parameter name="password" value="Abc123456"/>
     <classes>
-<!--        <class name="com.globant.tests.LoginTest"/>-->
-<!--        <class name="com.globant.tests.LogoutTest"/>-->
+        <class name="com.globant.tests.LoginTest"/>
+        <class name="com.globant.tests.LogoutTest"/>
         <class name="com.globant.tests.AccountDeactivationTest"/>
     </classes>
     </test>

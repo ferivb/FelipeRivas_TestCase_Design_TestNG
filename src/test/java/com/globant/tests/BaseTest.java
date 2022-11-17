@@ -27,10 +27,10 @@ public class BaseTest {
 
     }
 
-//    @AfterClass
-//    public void tearDown() {
-//        driver.getDriver().quit();
-//    }
+    @AfterClass
+    public void tearDown() {
+        driver.getDriver().quit();
+    }
 
     protected <T> void checkThat(
             String description, T actualValue, Matcher<? super T> expectedValue){

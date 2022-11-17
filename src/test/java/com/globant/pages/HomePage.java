@@ -80,6 +80,18 @@ public class HomePage extends BasePage{
      @FindBy(css = "div.loading-indicator state-success")
      private WebElement greenCheckmark;
 
+     @FindBy(id = "BtnCancel")
+     private WebElement cancelDeletionButton;
+
+     @FindBy(id = "TextError")
+     private WebElement ifThisIsAnErrorText;
+
+     @FindBy(id = "TextBlock")
+     private WebElement accountDeactivatedTextBlock;
+
+     @FindBy(id = "close")
+     private  WebElement closeAccountDeactivatedPopUp;
+
 
     public void clickOnUserIcon(){
         clickElement(userIconButton);
@@ -138,6 +150,7 @@ public class HomePage extends BasePage{
 //    }
 
     public WatchPage goToWatchPage(){
+        wait.until(ExpectedConditions.visibilityOf(watchButton));
         clickElement(watchButton);
         return new WatchPage(getDriver());
     }
@@ -150,17 +163,9 @@ public class HomePage extends BasePage{
         getDriver().switchTo().frame(profileSettingsIframe);
     }
 
-    public void goToDeletionConfirmIframe(){
-        getDriver().switchTo().frame(deleteConfirmationIframe);
-    }
-
     public void waitForWelcomeMessage(){
         super.wait.until(ExpectedConditions.visibilityOf(welcomeMessage));
     }
-
-//    public boolean isCustomNameShowing(){
-//        return customNameField.isDisplayed();
-//    }
 
     public boolean isCustomNameShowing(){
         return hasChildren(welcomeMessage);
@@ -208,10 +213,6 @@ public class HomePage extends BasePage{
         scrollToElement(deleteAccountLink);
     }
 
-    public boolean validateGreenCheckmark(){
-        return greenCheckmark.isDisplayed();
-    }
-
     public void clickFinalDeleteDisclosure(){
         wait.until(ExpectedConditions.visibilityOf(deletionConfirmedOk));
         clickElement(deletionConfirmedOk);
@@ -219,5 +220,25 @@ public class HomePage extends BasePage{
 
     public boolean isAccountDeactivated(){
         return accountDeactivatedNotification.getText().equals("Account Deactivated");
+    }
+
+    public void waitForCancelDeletionButton(){
+        wait.until(ExpectedConditions.visibilityOf(cancelDeletionButton));
+    }
+
+    public void waitForIfThisIsAnErrorText(){
+        wait.until(ExpectedConditions.visibilityOf(ifThisIsAnErrorText));
+    }
+
+    public void waitForAccountDeactivatedTextBlock(){
+        wait.until(ExpectedConditions.visibilityOf(accountDeactivatedTextBlock));
+    }
+
+    public void clickCloseAccountDeactivatedPopUp(){
+        clickElement(closeAccountDeactivatedPopUp);
+    }
+
+    public void waitForUserIconButton(){
+        wait.until(ExpectedConditions.visibilityOf(userIconButton));
     }
 }
