@@ -104,16 +104,16 @@ public class HomePage extends BasePage{
         return signUpButton.isDisplayed();
     }
 
-    public boolean confirmIfBannerIsVisible(){
-        boolean visible = false;
-        try {
-            waitForPresence(".promo-banner-container");
-            visible = promoBanner.isDisplayed();
-        } catch (TimeoutException e) {
-            visible = false;
-        }
-        return visible;
-    }
+//    public boolean confirmIfBannerIsVisible(){
+//        boolean visible = false;
+//        try {
+//            waitForPresence(".promo-banner-container");
+//            visible = promoBanner.isDisplayed();
+//        } catch (TimeoutException e) {
+//            visible = false;
+//        }
+//        return visible;
+//    }
 
     public WatchPage goToWatchPage(){
         clickElement(watchButton);

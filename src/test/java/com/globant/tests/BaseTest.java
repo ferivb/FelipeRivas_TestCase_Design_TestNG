@@ -15,7 +15,7 @@ public class BaseTest {
     protected HomePage home;
 
     @Parameters({"browser", "url"})
-    @BeforeTest
+    @BeforeClass
     public void testSetUp(String browser, String url){
         driver = new Driver(browser);
         Reporter.info("Deleting all Cookies");
@@ -27,14 +27,7 @@ public class BaseTest {
 
     }
 
-    @BeforeClass
-    public void closeBanner(){
-        if (home.confirmIfBannerIsVisible()){
-            Reporter.info("Found the banner");
-        }
-    }
-
-    @AfterTest
+    @AfterClass
     public void tearDown() {
         driver.getDriver().quit();
     }

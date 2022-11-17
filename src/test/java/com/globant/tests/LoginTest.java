@@ -10,6 +10,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTest(){
+        Reporter.info("Beginning the Login Test Case");
         home.clickOnUserIcon();
         home.clickOnLoginIframeLauncher();
         home.goToLoginIframe();
