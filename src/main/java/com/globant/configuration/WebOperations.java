@@ -1,9 +1,6 @@
 package com.globant.configuration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -65,5 +62,20 @@ public class WebOperations {
         Actions action = new Actions(driver);
         action.moveToElement(element);
         action.perform();
+    }
+
+    public boolean retryingFindClick(WebElement element) {
+        boolean result = false;
+        int attempts = 0;
+        while(attempts < 2) {
+            try {
+                clickElement(element);
+                result = true;
+                break;
+            } catch(StaleElementReferenceException e) {
+            }
+            attempts++;
+        }
+        return result;
     }
 }

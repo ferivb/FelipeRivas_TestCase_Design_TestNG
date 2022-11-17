@@ -94,11 +94,11 @@ public class HomePage extends BasePage{
 
 
     public void clickOnUserIcon(){
-        clickElement(userIconButton);
+        retryingFindClick(userIconButton);
     }
 
     public void clickOnLoginIframeLauncher(){
-        clickElement(loginIframeLauncher);
+        retryingFindClick(loginIframeLauncher);
     }
 
     public void hoverOverProfileButton(){
@@ -118,7 +118,7 @@ public class HomePage extends BasePage{
     }
 
     public void clickOnLoginSubmit(){
-        clickElement(loginSubmitButton);
+        retryingFindClick(loginSubmitButton);
     }
 
     public void exitIframe(){
@@ -138,25 +138,14 @@ public class HomePage extends BasePage{
         return signUpButton.isDisplayed();
     }
 
-//    public boolean confirmIfBannerIsVisible(){
-//        boolean visible = false;
-//        try {
-//            waitForPresence(".promo-banner-container");
-//            visible = promoBanner.isDisplayed();
-//        } catch (TimeoutException e) {
-//            visible = false;
-//        }
-//        return visible;
-//    }
-
     public WatchPage goToWatchPage(){
         wait.until(ExpectedConditions.visibilityOf(watchButton));
-        clickElement(watchButton);
+        retryingFindClick(watchButton);
         return new WatchPage(getDriver());
     }
 
     public void clickOnModifyAccount(){
-        clickElement(modifyAccountButton);
+        retryingFindClick(modifyAccountButton);
     }
 
     public void goToModifyAccountIframe(){
@@ -176,7 +165,7 @@ public class HomePage extends BasePage{
     }
 
     public void clickOnLogout(){
-        clickElement(logoutButton);
+        retryingFindClick(logoutButton);
     }
 
     public void refreshHomePage(){
@@ -184,7 +173,7 @@ public class HomePage extends BasePage{
     }
 
     public void clickOnDeleteAccountLink(){
-        clickElement(deleteAccountLink);
+        retryingFindClick(deleteAccountLink);
     }
 
     public boolean isDeleteConfirmationButtonVisible(){
@@ -192,7 +181,7 @@ public class HomePage extends BasePage{
     }
 
     public void clickConfirmDeleteAccount(){
-        clickElement(deleteConfirmationSubmit);
+        retryingFindClick(deleteConfirmationSubmit);
     }
 
     public boolean promoBannerExists(){
@@ -204,7 +193,7 @@ public class HomePage extends BasePage{
             Reporter.info("Banner is visible");
             getDriver().switchTo().frame(promoBanner);
             Reporter.info("Switched to banner iframe");
-            clickElement(closeBannerButton);
+            retryingFindClick(closeBannerButton);
             super.getDriver().switchTo().parentFrame();
         }
     }
@@ -215,7 +204,7 @@ public class HomePage extends BasePage{
 
     public void clickFinalDeleteDisclosure(){
         wait.until(ExpectedConditions.visibilityOf(deletionConfirmedOk));
-        clickElement(deletionConfirmedOk);
+        retryingFindClick(deletionConfirmedOk);
     }
 
     public boolean isAccountDeactivated(){
@@ -235,7 +224,7 @@ public class HomePage extends BasePage{
     }
 
     public void clickCloseAccountDeactivatedPopUp(){
-        clickElement(closeAccountDeactivatedPopUp);
+        retryingFindClick(closeAccountDeactivatedPopUp);
     }
 
     public void waitForUserIconButton(){
