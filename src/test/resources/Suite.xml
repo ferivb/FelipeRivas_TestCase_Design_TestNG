@@ -10,9 +10,9 @@
     <test name="ESPN tests">
         <parameter name="browser" value="chrome"/>
     <classes>
-        <class name="com.globant.tests.LoginTest"/>
-        <class name="com.globant.tests.LogoutTest"/>
-<!--        <class name="com.globant.tests.AccountDeactivationTest"/>-->
+<!--        <class name="com.globant.tests.LoginTest"/>-->
+<!--        <class name="com.globant.tests.LogoutTest"/>-->
+        <class name="com.globant.tests.AccountDeactivationTest"/>
     </classes>
     </test>
 </suite>

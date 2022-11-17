@@ -15,10 +15,10 @@ public class LoginTest extends BaseTest {
         home.clickOnLoginIframeLauncher();
         home.goToLoginIframe();
         Reporter.info("Testing the Login iframe");
-        checkThat("ESPN login Logo is present", home.isLoginLogoVisible(), is(true));
+        checkThat("ESPN login Logo is present", home.isIframeLogoVisible(), is(true));
         checkThat("Login button is present", home.isLoginButtonVisible(), is(true));
         checkThat("Sing up button is present", home.isSingUpButtonVisible(), is(true));
-        home.enterEmail("12345@fakemail.com");
+        home.enterEmail("123456@fakemail.com");
         home.enterPassword("Abc123456");
         home.clickOnLoginSubmit();
         home.exitIframe();

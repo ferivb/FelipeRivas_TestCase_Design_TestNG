@@ -1,7 +1,7 @@
 package com.globant.pages;
 
+import com.globant.reporting.Reporter;
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,7 +33,7 @@ public class HomePage extends BasePage{
     private WebElement loginSubmitButton;
 
     @FindBy(id = "logo")
-    private WebElement loginESPNLogo;
+    private WebElement iframeESPNLogo;
 
     @FindBy(id = "BtnCreateAccount")
     private WebElement signUpButton;
@@ -41,10 +41,13 @@ public class HomePage extends BasePage{
     @FindBy(id = "oneid-iframe")
     private WebElement profileSettingsIframe;
 
-    @FindBy(className = "promo-banner-container")
+    @FindBy(id = "oneid-iframe")
+    private WebElement deleteConfirmationIframe;
+
+    @FindBy(css = ".promo-banner-container iframe")
     private WebElement promoBanner;
 
-    @FindBy(className = "PromoBanner__CloseBtn")
+    @FindBy(css = ".PromoBanner__CloseBtn svg")
     private WebElement closeBannerButton;
 
     @FindBy(css = "a[href=\"http://www.espn.com/watch/\"]")
@@ -58,6 +61,25 @@ public class HomePage extends BasePage{
 
      @FindBy(css = ".account-management li:last-child a")
      private WebElement logoutButton;
+
+     @FindBy(css = "a[tref=\"/members/v3_1/modifyAccount\"]")
+     private WebElement modifyAccountButton;
+
+     @FindBy(id = "AccountDeleteLink")
+     private WebElement deleteAccountLink;
+
+     @FindBy(id = "BtnSubmit")
+     private WebElement deleteConfirmationSubmit;
+
+     @FindBy(id = "BtnSubmit")
+     private WebElement deletionConfirmedOk;
+
+     @FindBy(css = "#Title span")
+     private WebElement accountDeactivatedNotification;
+
+     @FindBy(css = "div.loading-indicator state-success")
+     private WebElement greenCheckmark;
+
 
     public void clickOnUserIcon(){
         clickElement(userIconButton);
@@ -92,8 +114,8 @@ public class HomePage extends BasePage{
         super.wait.until(ExpectedConditions.invisibilityOf(loginIframe));
     }
 
-    public boolean isLoginLogoVisible(){
-        return loginESPNLogo.isDisplayed();
+    public boolean isIframeLogoVisible(){
+        return iframeESPNLogo.isDisplayed();
     }
 
     public boolean isLoginButtonVisible(){
@@ -120,8 +142,16 @@ public class HomePage extends BasePage{
         return new WatchPage(getDriver());
     }
 
-    public void goToProfileSettingsIframe(){
+    public void clickOnModifyAccount(){
+        clickElement(modifyAccountButton);
+    }
+
+    public void goToModifyAccountIframe(){
         getDriver().switchTo().frame(profileSettingsIframe);
+    }
+
+    public void goToDeletionConfirmIframe(){
+        getDriver().switchTo().frame(deleteConfirmationIframe);
     }
 
     public void waitForWelcomeMessage(){
@@ -148,4 +178,46 @@ public class HomePage extends BasePage{
         refreshPage();
     }
 
+    public void clickOnDeleteAccountLink(){
+        clickElement(deleteAccountLink);
+    }
+
+    public boolean isDeleteConfirmationButtonVisible(){
+        return deleteConfirmationSubmit.isDisplayed();
+    }
+
+    public void clickConfirmDeleteAccount(){
+        clickElement(deleteConfirmationSubmit);
+    }
+
+    public boolean promoBannerExists(){
+        return super.getDriver().findElements(By.cssSelector("div.promo-banner-container > iframe")).size() != 0;
+    }
+
+    public void closePromoBanner(){
+        if(promoBannerExists()){
+            Reporter.info("Banner is visible");
+            getDriver().switchTo().frame(promoBanner);
+            Reporter.info("Switched to banner iframe");
+            clickElement(closeBannerButton);
+            super.getDriver().switchTo().parentFrame();
+        }
+    }
+
+    public void scrollToDeleteLink(){
+        scrollToElement(deleteAccountLink);
+    }
+
+    public boolean validateGreenCheckmark(){
+        return greenCheckmark.isDisplayed();
+    }
+
+    public void clickFinalDeleteDisclosure(){
+        wait.until(ExpectedConditions.visibilityOf(deletionConfirmedOk));
+        clickElement(deletionConfirmedOk);
+    }
+
+    public boolean isAccountDeactivated(){
+        return accountDeactivatedNotification.getText().equals("Account Deactivated");
+    }
 }

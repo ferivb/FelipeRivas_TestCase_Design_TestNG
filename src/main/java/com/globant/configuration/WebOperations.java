@@ -60,4 +60,10 @@ public class WebOperations {
     public void refreshPage(){
         driver.navigate().refresh();
     }
+
+    public void scrollToElement(WebElement element){
+        Actions action = new Actions(driver);
+        action.moveToElement(element);
+        action.perform();
+    }
 }

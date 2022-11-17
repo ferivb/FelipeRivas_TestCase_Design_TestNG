@@ -2,19 +2,18 @@ package com.globant.tests;
 
 import com.globant.reporting.Reporter;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 
-public class LogoutTest extends BaseTest{
+public class LogoutTest extends BaseTest {
 
     @BeforeMethod
     public void login(){
         home.clickOnUserIcon();
         home.clickOnLoginIframeLauncher();
         home.goToLoginIframe();
-        home.enterEmail("12345@fakemail.com");
+        home.enterEmail("123456@fakemail.com");
         home.enterPassword("Abc123456");
         home.clickOnLoginSubmit();
         home.exitIframe();
