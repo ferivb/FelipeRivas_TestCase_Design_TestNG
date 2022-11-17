@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,6 +34,13 @@ public class WebOperations {
         element.click();
     }
 
+    public void hoverOverElement(WebElement element){
+        waitForVisibility(element);
+        waitForClickable(element);
+        Actions action = new Actions(driver);
+        action.moveToElement(element).perform();
+    }
+
     public void typeOfInput(WebElement element, String text){
         element.sendKeys(text);
     }
@@ -49,4 +57,7 @@ public class WebOperations {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public void refreshPage(){
+        driver.navigate().refresh();
+    }
 }

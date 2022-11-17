@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" beforeDir="false" afterPath="$PROJECT_DIR$/FelipeRivas_TestCase_Design_TestNG.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/globant/configuration/WebOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/globant/configuration/WebOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/pages/WatchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/pages/WatchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/globant/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/globant/tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
