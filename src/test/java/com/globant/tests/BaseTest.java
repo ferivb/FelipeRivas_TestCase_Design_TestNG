@@ -8,11 +8,44 @@ import org.hamcrest.MatcherAssert;
 import org.testng.annotations.*;
 
 import static java.lang.String.format;
+import java.util.Random;
 
 public class BaseTest {
 
     private Driver driver;
     protected HomePage home;
+    protected static String user = "fake";
+    protected static String password = "Abc123456";
+
+    @Parameters({"browser", "url"})
+    @BeforeTest
+    public void createAccount(String browser, String url){
+        randomizeEmail();
+        testSetUp(browser, url);
+        Reporter.info("Creating testing account");
+        home.waitForUserIconButton();
+        home.closePromoBanner();
+        home.clickOnUserIcon();
+        home.clickOnLoginIframeLauncher();
+        home.goToLoginIframe();
+        home.clickOnCreateAccount();
+        home.enterFirstName("Test");
+        home.enterLastName("Account");
+        home.enterRegistrationEmail(user);
+        home.enterRegistrationPassword(password);
+        home.scrollToRegisterButton();
+        home.clickOnRegister();
+        home.waitIframeInvisibility();
+        home.exitIframe();
+        tearDown();
+    }
+
+    public void randomizeEmail(){
+        Random random = new Random();
+        int randomizer = random.nextInt(99999);
+        randomizer += 10;
+        user = user + randomizer + "@fakemail.com";
+    }
 
     @Parameters({"browser", "url"})
     @BeforeClass

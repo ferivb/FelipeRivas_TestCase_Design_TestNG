@@ -8,23 +8,21 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class AccountDeactivationTest extends BaseTest {
 
-    @Parameters({"email", "password"})
     @BeforeMethod
-    public void login(String email, String password){
+    public void login(){
         home.waitForUserIconButton();
         home.closePromoBanner();
         home.clickOnUserIcon();
         home.clickOnLoginIframeLauncher();
         home.goToLoginIframe();
-        home.enterEmail(email);
+        home.enterEmail(user);
         home.enterPassword(password);
         home.clickOnLoginSubmit();
         home.exitIframe();
     }
 
-    @Parameters({"email", "password"})
     @Test
-    public void accountDeactivationTest(String email, String password){
+    public void accountDeactivationTest(){
         home.waitForUserIconButton();
         home.clickOnUserIcon();
         home.clickOnModifyAccount();
@@ -44,7 +42,7 @@ public class AccountDeactivationTest extends BaseTest {
         home.clickOnUserIcon();
         home.clickOnLoginIframeLauncher();
         home.goToLoginIframe();
-        home.enterEmail(email);
+        home.enterEmail(user);
         home.enterPassword(password);
         home.clickOnLoginSubmit();
         home.waitForAccountDeactivatedTextBlock();

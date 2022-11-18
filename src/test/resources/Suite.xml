@@ -6,16 +6,13 @@
     </listeners>
 
     <parameter name="url" value="https://www.espnqa.com/?src=com&amp;_adblock=true&amp;espn=cloud"/>
-
+    <parameter name="browser" value="chrome"/>
     <test name="ESPN tests">
         <parameter name="browser" value="chrome"/>
-        <parameter name="emailDomain" value="@fakemail.com"/>
-        <parameter name="email" value="fake3@fakemail.com"/>
-        <parameter name="password" value="Abc123456"/>
     <classes>
         <class name="com.globant.tests.LoginTest"/>
         <class name="com.globant.tests.LogoutTest"/>
-<!--        <class name="com.globant.tests.AccountDeactivationTest"/>-->
+        <class name="com.globant.tests.AccountDeactivationTest"/>
     </classes>
     </test>
 </suite>

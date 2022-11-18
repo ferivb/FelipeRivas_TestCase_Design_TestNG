@@ -9,9 +9,8 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class LoginTest extends BaseTest {
 
-    @Parameters({"email", "password"})
     @Test
-    public void loginTest(String email, String password){
+    public void loginTest(){
         Reporter.info("Beginning the Login Test Case");
         home.waitForUserIconButton();
         home.clickOnUserIcon();
@@ -21,7 +20,7 @@ public class LoginTest extends BaseTest {
         checkThat("ESPN login Logo is present", home.isIframeLogoVisible(), is(true));
         checkThat("Login button is present", home.isLoginButtonVisible(), is(true));
         checkThat("Sing up button is present", home.isSingUpButtonVisible(), is(true));
-        home.enterEmail(email);
+        home.enterEmail(user);
         home.enterPassword(password);
         home.clickOnLoginSubmit();
         home.exitIframe();

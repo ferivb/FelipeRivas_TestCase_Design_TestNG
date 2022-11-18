@@ -2,7 +2,6 @@ package com.globant.configuration;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -38,16 +37,8 @@ public class WebOperations {
         action.moveToElement(element).perform();
     }
 
-    public void typeOfInput(WebElement element, String text){
-        element.sendKeys(text);
-    }
-
     public void waitForVisibility(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
-    }
-
-    public void waitForPresence(String locator){
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(locator)));
     }
 
     public void waitForClickable(WebElement element){

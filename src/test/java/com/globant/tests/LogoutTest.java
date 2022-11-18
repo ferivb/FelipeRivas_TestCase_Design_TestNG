@@ -9,14 +9,13 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class LogoutTest extends BaseTest {
 
-    @Parameters({"email", "password"})
     @BeforeMethod
-    public void login(String email, String password){
+    public void login(){
         home.waitForUserIconButton();
         home.clickOnUserIcon();
         home.clickOnLoginIframeLauncher();
         home.goToLoginIframe();
-        home.enterEmail(email);
+        home.enterEmail(user);
         home.enterPassword(password);
         home.clickOnLoginSubmit();
         home.exitIframe();

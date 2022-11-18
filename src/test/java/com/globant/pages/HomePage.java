@@ -92,6 +92,24 @@ public class HomePage extends BasePage{
      @FindBy(id = "close")
      private  WebElement closeAccountDeactivatedPopUp;
 
+     @FindBy(id = "BtnCreateAccount")
+     private WebElement createAccountButton;
+
+     @FindBy(id = "InputFirstName")
+     private WebElement firstNameField;
+
+    @FindBy(id = "InputLastName")
+    private WebElement lastNameField;
+
+    @FindBy(id = "InputEmail")
+    private WebElement registrationEmailField;
+
+    @FindBy(id = "password-new")
+    private WebElement registrationPasswordField;
+
+    @FindBy(id = "BtnSubmit")
+    private WebElement registrationButtonSubmit;
+
 
     public void clickOnUserIcon(){
         retryingFindClick(userIconButton);
@@ -229,5 +247,41 @@ public class HomePage extends BasePage{
 
     public void waitForUserIconButton(){
         wait.until(ExpectedConditions.visibilityOf(userIconButton));
+    }
+
+    public void clickOnCreateAccount(){
+        retryingFindClick(createAccountButton);
+    }
+
+    public void enterFirstName(String firstName){
+        wait.until(ExpectedConditions.visibilityOf(firstNameField));
+        firstNameField.sendKeys(firstName);
+    }
+
+    public void enterLastName(String lastName){
+        wait.until(ExpectedConditions.visibilityOf(lastNameField));
+        lastNameField.sendKeys(lastName);
+    }
+
+    public void enterRegistrationEmail(String email){
+        wait.until(ExpectedConditions.visibilityOf(registrationEmailField));
+        registrationEmailField.sendKeys(email);
+    }
+
+    public void enterRegistrationPassword(String password){
+        wait.until(ExpectedConditions.visibilityOf(registrationPasswordField));
+        registrationPasswordField.sendKeys(password);
+    }
+
+    public void scrollToRegisterButton(){
+        scrollToElement(registrationButtonSubmit);
+    }
+
+    public void clickOnRegister(){
+        retryingFindClick(registrationButtonSubmit);
+    }
+
+    public void waitIframeInvisibility(){
+        wait.until(ExpectedConditions.invisibilityOf(loginIframe));
     }
 }
